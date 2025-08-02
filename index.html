@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superior Medicine - Concierge Medical Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Fixed Header with Navigation -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="supmed.png" alt="Superior Medicine Logo" class="logo-img">
+                <h1>Superior Medicine</h1>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav" id="mobileNav">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Welcome Section -->
+        <section class="section welcome-section">
+            <h2>Welcome</h2>
+            <p>Experience the convenience of local concierge medical services right at your doorstep! As a caring nurse practitioner and a mom with over 25 years of living and raising a family in Superior, Colorado, I understand urgent care needs of families. Whether you're in need of a quick sports physical for your child or help diagnosing a fever on a Sunday evening, I'm here to provide quality medical care with compassion and the nurturing touch of a mom.</p>
+            
+            <p>I have experiences with all ages birth to 100 and have worked in both urgent care and family practice settings. At this time I am only accepting cash payments for services (cash, check or Venmo). Sick home visits and sports physicals starting at $75.00. Any additional point of care testing is billed separately.</p>
+            
+            <p>I've been working in health care since 1998. Originally from Florida, I completed a Bachelor's in Microbiology from the University of Florida and later moved to Texas to complete a bachelor's in Nursing from Texas Women's University. I have worked in a large variety of fields including medical/surgical, oncology/hematology, mom/baby, and pediatrics. I graduated with a Master's in Nursing with a focus in family medicine from Regis University in 2022. I have been working in both the primary care and urgent care settings with a focus on prevention for the past 3 years.</p>
+            
+            <p>My website is under construction as I learn how to build it! Thanks for your patience and I look forward to serving you and your family soon!</p>
+            
+            <p>You may text <strong>720-290-8243</strong> for more info or email to schedule an appointment.</p>
+        </section>
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <h3>Thank you!</h3>
+            <p><strong>Lora Shima, FNP-C</strong></p>
+            <div class="quote">
+                "Your health is my priority, providing expert guidance in the comfort of your home."
+            </div>
+            <p><a href="mailto:info@superiormedicine.com" class="email-link">Email a request for an appointment</a></p>
+        </div>
+
+        <!-- Patient Testimonies Section -->
+        <section class="section">
+            <h2>Patient Testimonies</h2>
+            <p>What our patients have to say about the care they have received from Superior Medicine.</p>
+            
+            <div class="testimonial">
+                <h4>Patient Experience - G.G.:</h4>
+                <p>"Lora was so great when I hurt my thumb and was not able to get in to my regular doctor. She came to the house and was able to assess the injury, applied a temporary splint and guidance on how to care for the injury. When I did see the doctor a few days later, all the advice Lora had given me was accurate and confirmed by my regular doctor. I've also used Lora to fill bridge prescriptions."</p>
+            </div>
+
+            <div class="testimonial">
+                <h4>Patient Experience - K.S.:</h4>
+                <p>"My experience with Lora was exceptional, and I can't recommend her highly enough. From the moment I was seen, I felt I was in the most capable hands. The care I received was truly diligent, every detail was attended to, and I never felt rushed. What stood out most was the time Lora took to ensure I was fully informed. She answered all of my questions in detailed, easy-to-understand language, which made me feel like an active participant in my own care. Lora was extremely responsive to all of my concerns, making me feel heard and valued. Thanks to her expertise and compassionate approach, I felt completely safe and cared for throughout my entire visit. It is rare to find such a combination of professionalism and genuine concern, and I am so grateful for the outstanding care I received."</p>
+            </div>
+
+            <div class="testimonial">
+                <h4>Real Experiences - Anonymous:</h4>
+                <p>"Lora offered me a complimentary consultation to ensure she could address my needs effectively. After we discussed my situation, she recommended that I seek care at an ER. I truly appreciated her prompt advice and the fact that she didn't mislead me or try to take advantage of the emergency."</p>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <h3>Get in touch for a healthcare consult today.</h3>
+            <p>Contact us at <strong>720-290-8243</strong> or email for an appointment</p>
+        </section>
+    </main>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            
+            mobileNav.classList.toggle('active');
+            menuBtn.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.mobile-nav-list a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobileNav').classList.remove('active');
+                document.querySelector('.mobile-menu-btn').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
+

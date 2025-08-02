@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Superior Medicine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Fixed Header with Navigation -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="supmed.png" alt="Superior Medicine Logo" class="logo-img">
+                <h1>Superior Medicine</h1>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="services.html" class="nav-link active">Services</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav" id="mobileNav">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link active">Services</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="section">
+            <h2>Our Services</h2>
+            <p>Superior Medicine provides comprehensive concierge medical services in the comfort of your home. We specialize in personalized care for patients of all ages.</p>
+        </section>
+
+        <section class="section">
+            <h2>Home Visit Services</h2>
+            
+            <div class="testimonial">
+                <h4>Sick Visits</h4>
+                <p>Assessment of mild to moderate illnesses in your home and treatment for conditions such as strep throat, mono, RSV, influenza, covid, various upper respiratory infections, urinary tract infections, and ear infections. Prescriptions can be sent to the pharmacy of your choice.</p>
+            </div>
+
+            <div class="testimonial">
+                <h4>Chronic and Primary Care Visits</h4>
+                <p>Completion of work or sports physical (excluding DOT physicals) in your home. Order simple routine labs and/or some diagnostics. Bridge prescriptions for routine medications. Blood pressure, diabetes and obesity screenings as well as other health assessment screenings.</p>
+            </div>
+
+            <div class="testimonial">
+                <h4>Acute Care/Injury Visits</h4>
+                <p>Assessment of minor injuries in your home. Injuries such as sprains, strains, minor wound care and repair. *Limited suturing. Can order diagnostic x-rays at some outpatient radiology locations.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Additional Services</h2>
+            
+            <div class="testimonial">
+                <h4>Point of Care Testing</h4>
+                <p>Various diagnostic tests available at your location. Additional testing is billed separately based on specific requirements.</p>
+            </div>
+
+            <div class="testimonial">
+                <h4>Bridge Prescriptions</h4>
+                <p>Short-term prescription assistance when you can't get to your regular doctor or need medication management between appointments.</p>
+            </div>
+
+            <div class="testimonial">
+                <h4>Health Consultations</h4>
+                <p>Professional medical advice and guidance for health concerns, medication questions, or general wellness planning.</p>
+            </div>
+        </section>
+
+        <div class="contact-info">
+            <h3>Payment Information</h3>
+            <p>At this time, we accept cash payments only (cash, check, or Venmo).</p>
+            <p><strong>Base service fee:</strong> $75.00 for sick visits and sports physicals</p>
+            <p><strong>Additional testing:</strong> Billed separately as needed</p>
+        </div>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <h3>Ready to schedule a visit?</h3>
+            <p>Contact us at <strong>720-290-8243</strong> or email to book your appointment today</p>
+        </section>
+    </main>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            
+            mobileNav.classList.toggle('active');
+            menuBtn.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.mobile-nav-list a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobileNav').classList.remove('active');
+                document.querySelector('.mobile-menu-btn').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

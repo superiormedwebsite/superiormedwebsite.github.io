@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Superior Medicine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Fixed Header with Navigation -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="supmed.png" alt="Superior Medicine Logo" class="logo-img">
+                <h1>Superior Medicine</h1>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav" id="mobileNav">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="section">
+            <h2>Contact Superior Medicine</h2>
+            <p>Get in touch with us to schedule your concierge medical appointment or ask any questions about our services.</p>
+        </section>
+
+        <section class="section">
+            <h2>Get in Touch</h2>
+            
+            <div class="contact-info">
+                <h3>Lora Shima, FNP-C</h3>
+                <p><strong>Phone:</strong> <a href="tel:720-290-8243" class="email-link">720-290-8243</a></p>
+                <p><strong>Text:</strong> 720-290-8243 for quick questions</p>
+                <p><strong>Email:</strong> <a href="mailto:info@superiormedicine.com" class="email-link">info@superiormedicine.com</a></p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Service Area</h2>
+            <p>We proudly serve Superior, Colorado and surrounding communities. As a local resident for over 25 years, I understand the unique needs of our area families.</p>
+            
+            <div class="testimonial">
+                <h4>Primary Service Areas</h4>
+                <p>Superior, Louisville, Lafayette, Boulder, Broomfield, and nearby communities in Boulder County.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>How to Schedule</h2>
+            
+            <div class="testimonial">
+                <h4>For Appointments</h4>
+                <p>Text or call 720-290-8243 to discuss your needs and schedule a convenient time for your home visit.</p>
+            </div>
+
+            <div class="testimonial">
+                <h4>For Questions</h4>
+                <p>Feel free to reach out via text, phone, or email. I'm here to help determine if our services are right for you.</p>
+            </div>
+
+            <div class="testimonial">
+                <h4>Emergency Situations</h4>
+                <p>For medical emergencies, please call 911 or go to your nearest emergency room. Our services are for non-emergency medical care.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Payment Information</h2>
+            <div class="contact-info">
+                <h3>Accepted Payment Methods</h3>
+                <p>• Cash</p>
+                <p>• Check</p>
+                <p>• Venmo</p>
+                <p><strong>Starting fee:</strong> $75.00 for sick visits and sports physicals</p>
+                <p><strong>Additional testing:</strong> Billed separately as needed</p>
+            </div>
+        </section>
+
+        <div class="quote">
+            "Your health is my priority, providing expert guidance in the comfort of your home."
+        </div>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <h3>Ready to experience concierge medicine?</h3>
+            <p>Contact us today at <strong>720-290-8243</strong> to schedule your appointment</p>
+        </section>
+    </main>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            
+            mobileNav.classList.toggle('active');
+            menuBtn.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.mobile-nav-list a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobileNav').classList.remove('active');
+                document.querySelector('.mobile-menu-btn').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Superior Medicine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Fixed Header with Navigation -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="supmed.png" alt="Superior Medicine Logo" class="logo-img">
+                <h1>Superior Medicine</h1>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="about.html" class="nav-link active">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav" id="mobileNav">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="section">
+            <h2>About Lora Shima, FNP-C</h2>
+            <div class="quote">
+                "Your health is my priority, providing expert guidance in the comfort of your home."
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Professional Background</h2>
+            <p>I've been working in healthcare since 1998, bringing over 25 years of experience to Superior Medicine. As both a healthcare professional and a mother who has lived and raised a family in Superior, Colorado for over 25 years, I understand the unique healthcare needs of our community.</p>
+            
+            <p>My journey in healthcare began with a strong foundation in science. Originally from Florida, I completed a Bachelor's degree in Microbiology from the University of Florida. Seeking to make a more direct impact on patient care, I moved to Texas to pursue a Bachelor's in Nursing from Texas Women's University.</p>
+        </section>
+
+        <section class="section">
+            <h2>Clinical Experience</h2>
+            <p>Throughout my career, I have worked in a diverse range of healthcare settings, gaining valuable experience that benefits my patients today:</p>
+            
+            <div class="testimonial">
+                <h4>Medical/Surgical Nursing</h4>
+                <p>Comprehensive care for patients with acute and chronic medical conditions requiring surgical intervention and complex medical management.</p>
+            </div>
+
+            <div class="testimonial">
+                <h4>Oncology/Hematology</h4>
+                <p>Specialized care for patients battling cancer and blood disorders, providing compassionate support during challenging times.</p>
+            </div>
+
+            <div class="testimonial">
+                <h4>Mom/Baby Care</h4>
+                <p>Caring for mothers and newborns during the precious early days of life, ensuring healthy starts for families.</p>
+            </div>
+
+            <div class="testimonial">
+                <h4>Pediatrics</h4>
+                <p>Specialized care for children from birth through adolescence, understanding the unique needs of growing families.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Advanced Practice Education</h2>
+            <p>To expand my ability to serve patients, I pursued advanced education in family medicine. I graduated with a Master's in Nursing with a focus in Family Medicine from Regis University in 2022. This advanced training allows me to provide comprehensive primary care services including diagnosis, treatment, and ongoing health management.</p>
+            
+            <p>For the past 3 years, I have been working in both primary care and urgent care settings with a special focus on preventive medicine - helping patients maintain their health and catch potential issues early.</p>
+        </section>
+
+        <section class="section">
+            <h2>Why Concierge Medicine?</h2>
+            <p>Having experienced the healthcare system both as a provider and as a parent, I understand the frustrations of long wait times, rushed appointments, and difficulty accessing care when you need it most. Superior Medicine was born from a desire to provide the kind of personalized, accessible healthcare that every family deserves.</p>
+            
+            <p>By bringing medical care directly to your home, I can spend the time needed to truly understand your health concerns, provide thorough assessments, and develop treatment plans that work for your lifestyle and schedule.</p>
+        </section>
+
+        <div class="contact-info">
+            <h3>Credentials & Certifications</h3>
+            <p><strong>Lora Shima, FNP-C</strong></p>
+            <p>Family Nurse Practitioner - Certified</p>
+            <p>Bachelor of Science in Microbiology - University of Florida</p>
+            <p>Bachelor of Science in Nursing - Texas Women's University</p>
+            <p>Master of Science in Nursing, Family Medicine - Regis University (2022)</p>
+            <p>Healthcare experience since 1998</p>
+        </div>
+    </main>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            
+            mobileNav.classList.toggle('active');
+            menuBtn.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.mobile-nav-list a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobileNav').classList.remove('active');
+                document.querySelector('.mobile-menu-btn').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
